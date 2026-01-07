@@ -1,7 +1,11 @@
 // API Configuration
 // Uses environment variable for API base URL
 // Defaults to the Node.js backend URL for development
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:3001';
+const API_BASE_URL =
+  import.meta.env.VITE_API_URL ||
+  import.meta.env.VITE_API_BASE_URL ||
+  "http://localhost:3001";
+
 
 export const API_ENDPOINTS = {
   // Auth endpoints
